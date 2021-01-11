@@ -1,0 +1,37 @@
+[
+  {
+    "imgUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.pexels.com%2Fsearch%2Fhotel%2520room%2F&psig=AOvVaw3UmT5ey-oMaWBJlrmHOEPk&ust=1610427374944000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKCbsM-Lk-4CFQAAAAAdAAAAABAD",
+    "name": "HOTEL ALPHA ONE",
+    "price": 1299,
+    "productId": 1,
+    "description":"This is first hotel."
+  },
+  {
+    "imgUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fslate.com%2Fbusiness%2F2012%2F11%2Fhotel-prices-why-urban-hotels-cost-so-much-more-than-houses-or-apartments-in-the-same-city.html&psig=AOvVaw3UmT5ey-oMaWBJlrmHOEPk&ust=1610427374944000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKCbsM-Lk-4CFQAAAAAdAAAAABAI",
+    "name": "HOTEL BETA TWO",
+    "price": 999,
+    "productId": 2,
+    "description":"This is second hotel."
+  },
+  {
+    "imgUrl": "https://www.google.com/url?sa=i&url=http%3A%2F%2Fwww.bedbreakfast.ee%2Ftypes-hotel-rooms%2F&psig=AOvVaw3UmT5ey-oMaWBJlrmHOEPk&ust=1610427374944000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKCbsM-Lk-4CFQAAAAAdAAAAABAO",
+    "name":"HOTEL GAMMA THREE",
+    "price": 1499,
+    "productId": 3,
+    "description":"This is third hotel."
+  },
+  {
+    "imgUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wsj.com%2Farticles%2Fwindowless-hotel-rooms-cozy-or-claustrophobic-11564676415&psig=AOvVaw3UmT5ey-oMaWBJlrmHOEPk&ust=1610427374944000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCKCbsM-Lk-4CFQAAAAAdAAAAABAU",
+    "name": "HOTEL DELTA FOUR",
+    "price": 2499,
+    "productId": 4,
+    "description":"This is fourth hotel."
+  },
+  {
+    "imgUrl": "https://www.google.com/url?sa=i&url=https%3A%2F%2Famazing-hotel-suites.com%2Fsingapore%2F&psig=AOvVaw3ub3RqR0-_EoKLJuL93u7i&ust=1610428613304000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCd_qSQk-4CFQAAAAAdAAAAABAD",
+    "name": "HOTEL LAMBDA FIVE",
+    "price": 3999,
+    "productId": 5,
+    "description":"This is fifth hotel."
+  }
+]

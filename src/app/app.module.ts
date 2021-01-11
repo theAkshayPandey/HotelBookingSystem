@@ -8,9 +8,11 @@ import { AuthModule } from "src/app/auth/auth.module";
 import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { BookingComponent } from './booking/booking.component';
-import { RoomsComponent } from './rooms/rooms.component';
-import { SimpleComponent } from './Rooms/simple/simple.component';
-import { LuxuryComponent } from './rooms/luxury/luxury.component';
+import { HotelModule } from './hotel/hotel.module';
+import { ListhotelComponent } from './listhotel/listhotel.component';
+import { SideNavComponent } from './listhotel/side-nav/side-nav.component';
+import { HoteltabComponent } from './listhotel/hoteltab/hoteltab.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -18,16 +20,18 @@ import { LuxuryComponent } from './rooms/luxury/luxury.component';
     AppComponent,
     HomeComponent,
     BookingComponent,
-    RoomsComponent,
-    SimpleComponent,
-    LuxuryComponent
+    ListhotelComponent,
+    SideNavComponent,
+    HoteltabComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     AuthModule,
-    SharedModule
+    SharedModule,
+    HotelModule
   ],
   providers: [],
   bootstrap: [AppComponent]

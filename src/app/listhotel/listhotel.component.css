@@ -1,0 +1,25 @@
+.cart-div {
+  text-align: center;
+  padding: 2em;
+}
+.spacing {
+  margin-top: 10px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.list-hotel {
+  width: 1000px;
+  padding: 2px;
+}
+.side-nav {
+  width: 300px;
+  height: 400px;
+  padding: 2px;
+}
+.btn-size {
+  width: 300px;
+  height: 50px;
+  font-size: large;
+  color: white;
+  background-color: #9933ff;
+}

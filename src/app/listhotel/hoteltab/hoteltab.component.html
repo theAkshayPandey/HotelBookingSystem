@@ -1,0 +1,53 @@
+<div>   
+    <mat-form-field>
+        <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search hotel">
+    </mat-form-field>
+        <mat-card style="background-color: whitesmoke;">
+            <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z2">
+                <ng-container matColumnDef="image">
+                    <th mat-header-cell *matHeaderCellDef>Hotel Image</th>
+                    <td mat-cell style="width: 300px;" *matCellDef="let hotel">
+                        <img [src]="hotel.imgUrl" class="products-listing-image" />
+                    </td>
+                </ng-container>
+        
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef>Description</th>
+                    <td mat-cell style="text-align: left; width: 500px;" *matCellDef="let hotel">
+                        <div>
+                            <span style="font-weight: 500; font-size: large;">{{ hotel.name }}
+                            </span><br>
+                            {{hotel.description}}
+                        </div>
+                    </td>
+                </ng-container>
+
+        <ng-container matColumnDef="price">
+            <th mat-header-cell mat-sort-header *matHeaderCellDef>Price</th>
+            <td mat-cell style="text-align: left; width: 500px;" *matCellDef="let hotel">
+                Starts from :<br>
+                <div style="padding-top: 5px; font-size: large; font-weight: 500;">
+                    {{ hotel.price | currency: "&#8377;" }}
+                </div>
+            </td>
+        </ng-container>
+
+                <ng-container matColumnDef="action">
+                    <th mat-header-cell style="text-align: right;" *matHeaderCellDef></th>
+                    <td mat-cell style="text-align: right;" *matCellDef="let hotel">
+                        <div>
+                        <a routerLink="/viewRooms" routerLinkActive="active">
+                            <button  mat-raised-button color="primary" class="btn-size">
+                                &nbsp; View Hotel
+                            </button>
+                        </a>
+                        </div>
+                    </td>
+                </ng-container>
+        
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+            </table>
+        </mat-card>
+
+</div>

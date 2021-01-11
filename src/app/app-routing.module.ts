@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { BookingComponent } from './booking/booking.component';
 import { HomeComponent } from './home/home.component';
-import { RoomsComponent } from './rooms/rooms.component';
+import { ListhotelComponent } from './listhotel/listhotel.component';
 
 
 const routes: Routes = [
@@ -24,9 +24,14 @@ const routes: Routes = [
     component:BookingComponent
   },
   {
-    path: 'rooms',
-    component:RoomsComponent
-  }
+    path: 'hotels',
+    component:ListhotelComponent
+  },
+  {
+    path: 'viewRooms',
+    loadChildren: () => import('./hotel/hotel.module').then(m=>m.HotelModule)
+  },
+  
 
 ];
 
