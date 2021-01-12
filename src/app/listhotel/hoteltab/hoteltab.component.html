@@ -2,18 +2,17 @@
     <mat-form-field>
         <input matInput (keyup)="applyFilter($event.target.value)" placeholder="Search hotel">
     </mat-form-field>
-        <mat-card style="background-color: whitesmoke;">
             <table mat-table matSort [dataSource]="dataSource" class="mat-elevation-z2">
                 <ng-container matColumnDef="image">
-                    <th mat-header-cell *matHeaderCellDef>Hotel Image</th>
+                    <th mat-header-cell *matHeaderCellDef></th>
                     <td mat-cell style="width: 300px;" *matCellDef="let hotel">
                         <img [src]="hotel.imgUrl" class="products-listing-image" />
                     </td>
                 </ng-container>
         
                 <ng-container matColumnDef="name">
-                    <th mat-header-cell mat-sort-header *matHeaderCellDef>Description</th>
-                    <td mat-cell style="text-align: left; width: 500px;" *matCellDef="let hotel">
+                    <th mat-header-cell mat-sort-header *matHeaderCellDef>Hotel</th>
+                    <td mat-cell style="text-align: left; width: 600px;" *matCellDef="let hotel">
                         <div>
                             <span style="font-weight: 500; font-size: large;">{{ hotel.name }}
                             </span><br>
@@ -24,7 +23,7 @@
 
         <ng-container matColumnDef="price">
             <th mat-header-cell mat-sort-header *matHeaderCellDef>Price</th>
-            <td mat-cell style="text-align: left; width: 500px;" *matCellDef="let hotel">
+            <td mat-cell style="text-align: left; width: 300px;" *matCellDef="let hotel">
                 Starts from :<br>
                 <div style="padding-top: 5px; font-size: large; font-weight: 500;">
                     {{ hotel.price | currency: "&#8377;" }}
@@ -48,6 +47,4 @@
                 <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
                 <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
             </table>
-        </mat-card>
-
 </div>

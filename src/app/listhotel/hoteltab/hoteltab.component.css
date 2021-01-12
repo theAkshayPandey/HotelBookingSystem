@@ -1,6 +1,7 @@
 .products-listing-image {
   height: 15em;
-  width: 17em;
+  width: 18em;
+  padding: 1em;
 }
 
 .mat-form-field {
