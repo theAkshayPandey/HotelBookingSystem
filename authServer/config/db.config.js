@@ -1,9 +1,4 @@
-const config = require('../config/config')
 const { Sequelize } = require('sequelize');
-
-const usrname = config.mysql.username;
-const database = config.mysql.db;
-const password = config.mysql.password;
 
 const sequelize = new Sequelize({
   database: 'test',
@@ -11,10 +6,6 @@ const sequelize = new Sequelize({
   password: '',
   dialect: 'mysql',
 });
-
-/*const db = async function (){
-  return await sequelize.authenticate();
-}*/
 
 sequelize
   .authenticate()

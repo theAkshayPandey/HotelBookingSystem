@@ -53,8 +53,9 @@ export class AuthService {
             console.log(`user found`, user);
             return of(user);
           }),
-          catchError(e => {
-            return throwError(`Your login not found. Try again`);
+      catchError(e => {
+        console.log(e);
+            return throwError(`Your login not found. Try again.`);
           })
         );
 

@@ -6,7 +6,7 @@ const ExtractJWT = require('passport-jwt').ExtractJwt;
 const config= require('../config/config');
 const userController=require('../controller/user.controller');
 
-
+/*
 const localLogin = new LocalStrategy(
     {
         usernameFeild:'email'
@@ -21,15 +21,16 @@ const localLogin = new LocalStrategy(
             });
     }
 );
-
+*/
 
 const jwtLogin = new JwtStrategy(
     {
-        jwtFromRequest : ExtractJWT.fromAuthHeaderAsBearerToken(),
-        secretOrKey : 'eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTYxMDcxMzU4MSwiaWF0IjoxNjEwNzEzNTgxfQ.wKJfIDU_UiLHYyMLW5NoHOpskN3tDsUGBJz6X5LQV3A'
+        jwtFromRequest: ExtractJWT.fromAuthHeaderAsBearerToken(),
+        secretOrKey: 'eyJhbGciOiJIUzI1NiJ9.eyJSb2xlIjoiQWRtaW4iLCJJc3N1ZXIiOiJJc3N1ZXIiLCJVc2VybmFtZSI6IkphdmFJblVzZSIsImV4cCI6MTYxMDcxMzU4MSwiaWF0IjoxNjEwNzEzNTgxfQ.wKJfIDU_UiLHYyMLW5NoHOpskN3tDsUGBJz6X5LQV3A'
     },
-    async (payload, done) => {
-        const user = await userController.getUserById(payload._id);
+    async ( payload , done) => {
+        console.log(payload.id);
+        const user = await userController.getUserById(payload.id);
         return user
         ? done(null, user)
         : done(null, false, {
@@ -39,4 +40,4 @@ const jwtLogin = new JwtStrategy(
 )
 
 
-module.exports = passport.use(localLogin).use(jwtLogin);
+module.exports = passport.use(jwtLogin);

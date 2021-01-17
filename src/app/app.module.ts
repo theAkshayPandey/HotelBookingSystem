@@ -12,7 +12,8 @@ import { HotelModule } from './hotel/hotel.module';
 import { ListhotelComponent } from './listhotel/listhotel.component';
 import { SideNavComponent } from './listhotel/side-nav/side-nav.component';
 import { HoteltabComponent } from './listhotel/hoteltab/hoteltab.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
+import { AuthHeaderInterceptorService } from './core/auth-header-interceptor.service';
 
 
 @NgModule({
@@ -33,7 +34,11 @@ import { HttpClientModule } from '@angular/common/http';
     SharedModule,
     HotelModule
   ],
-  providers: [],
+  providers: [{
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthHeaderInterceptorService,
+      multi: true,
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

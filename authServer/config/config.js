@@ -9,5 +9,5 @@ mysql:{
     password: envVars.MYSQL_PASSWORD,
     db:envVars.MYSQL_DATABASE
 },
-jwtSecret: envVars.secretOrKey
+jwtSecret: envVars.JWT_SECRET
 };

@@ -19,7 +19,7 @@ async function login(email, password) {
   let user = await User.findOne({ where: { email: email } });
 
   if (isUserValid(user, password, user.hashedPassword)) {
-    console.log(JSON.stringify(user));
+   // console.log(user);
     delete user.hashedPassword;
     return user;
   } else {
@@ -28,7 +28,6 @@ async function login(email, password) {
 }
 
 async function getUserById(id) {
-    //find user by primay key
   let user = await User.findByPk(id);
   if (user) {
     delete user.hashedPassword;

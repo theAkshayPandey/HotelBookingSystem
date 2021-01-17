@@ -20,6 +20,7 @@ export class AppComponent {
     
     this.authService.findMe().subscribe((user) => {
       this.user = user;
+      console.log(user);
     });
 
     this.userSubscription = this.authService.user.subscribe((user) => {
